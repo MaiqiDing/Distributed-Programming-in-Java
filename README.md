@@ -2,6 +2,8 @@
 
 These mini projects are programming assignments for Parallel Programming in Java offered by Rice University on Coursera, as a part of [Parallel, Concurrent, and Distributed Programming in Java Specialization](https://www.coursera.org/specializations/pcdp)
 
+Check my repositories of [Parallel Programming in Java](https://github.com/MaiqiDing/Parallel-Programming-in-Java) and [Concurrent Programming in Java](https://github.com/MaiqiDing/Concurrent-Programming-in-Java). 
+
 ## Compiling  
 ### Compiling with Maven from Command Line 
 
