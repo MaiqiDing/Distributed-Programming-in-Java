@@ -3,6 +3,8 @@ package edu.coursera.distributed;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * A basic and very limited implementation of a file server that responds to GET
@@ -68,8 +70,10 @@ public final class FileServer {
              * If you wish to do so, you are free to re-use code from
              * MiniProject 2 to help with completing this MiniProject.
              */
-            Thread thread = new Thread(
+            final ExecutorService executor = Executors.newFixedThreadPool(4);
+            executor.submit(
                     () -> {
+
                         try {
                             InputStream stream = s.getInputStream();
                             InputStreamReader reader = new InputStreamReader(stream);
@@ -104,8 +108,6 @@ public final class FileServer {
                         }
                     }
             );
-
-            thread.start();
         }
     }
 }
